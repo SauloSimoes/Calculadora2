@@ -39,6 +39,8 @@
             this.btIgual = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btSoma = new System.Windows.Forms.Button();
+            this.btnSegue = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numOper1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOper2)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +82,6 @@
             this.numOper1.Name = "numOper1";
             this.numOper1.Size = new System.Drawing.Size(120, 20);
             this.numOper1.TabIndex = 2;
-            this.numOper1.ValueChanged += new System.EventHandler(this.numOper1_ValueChanged);
             // 
             // numOper2
             // 
@@ -162,7 +163,9 @@
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(658, 33);
             this.lblResultado.TabIndex = 10;
+            this.lblResultado.Text = "NaN";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblResultado.Visible = false;
             // 
             // btSoma
             // 
@@ -175,11 +178,34 @@
             this.btSoma.UseVisualStyleBackColor = true;
             this.btSoma.Click += new System.EventHandler(this.btSoma_Click_1);
             // 
+            // btnSegue
+            // 
+            this.btnSegue.Enabled = false;
+            this.btnSegue.Location = new System.Drawing.Point(160, 295);
+            this.btnSegue.Name = "btnSegue";
+            this.btnSegue.Size = new System.Drawing.Size(70, 38);
+            this.btnSegue.TabIndex = 12;
+            this.btnSegue.Text = "Segue";
+            this.btnSegue.UseVisualStyleBackColor = true;
+            this.btnSegue.Click += new System.EventHandler(this.btnSegue_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(525, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 36);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Limpa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSegue);
             this.Controls.Add(this.btSoma);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btIgual);
@@ -213,6 +239,8 @@
         private System.Windows.Forms.Button btIgual;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btSoma;
+        private System.Windows.Forms.Button btnSegue;
+        private System.Windows.Forms.Button button1;
     }
 }
 

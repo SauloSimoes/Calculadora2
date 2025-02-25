@@ -24,7 +24,7 @@ namespace Calculadora2
 
         }
 
-        
+      
         
 
         void AtribuirOperacao(string oper)
@@ -51,7 +51,7 @@ namespace Calculadora2
         private void btDiv_Click(object sender, EventArgs e)
         {
             AtribuirOperacao(btDiv.Text);
-            if (numOper2.Value == 0 && lblOper.Text == btDiv.Text)
+            if ((double)numOper2.Value == 0.000 && lblOper.Text == btDiv.Text)
             {
                 btIgual.Enabled = false;
             }
@@ -82,16 +82,36 @@ namespace Calculadora2
                     break;
             }
             lblResultado.Text = res.ToString();
-        }
-
-        private void numOper1_ValueChanged(object sender, EventArgs e)
-        {
-
+            lblResultado.Visible = true;
+            btnSegue.Enabled = true;
         }
 
         private void numOper2_ValueChanged(object sender, EventArgs e)
         {
-            if (numOper2.Value == 0 && lblOper.Text == btDiv.Text)
+            if ((double)numOper2.Value == 0.000 && lblOper.Text == btDiv.Text)
+            {
+                btIgual.Enabled = false;
+            }
+            else
+            {
+                btIgual.Enabled = true;
+            }
+        }
+
+        private void btnSegue_Click(object sender, EventArgs e)
+        {
+            numOper1.Value = (decimal)Double.Parse(lblResultado.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            numOper1.Value = (decimal)0.000;
+            numOper2.Value = (decimal)0.000;
+            lblOper.Text = "...";
+            lblResultado.Text = "NaN";
+            lblResultado.Visible=false;
+            btnSegue.Enabled=false;
+            if ((double)numOper2.Value == 0.000 && lblOper.Text == btDiv.Text)
             {
                 btIgual.Enabled = false;
             }
