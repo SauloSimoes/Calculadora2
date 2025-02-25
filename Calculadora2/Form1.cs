@@ -103,14 +103,16 @@ namespace Calculadora2
             numOper1.Value = (decimal)Double.Parse(lblResultado.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void btnLimpa_Click(object sender, EventArgs e)
         {
             numOper1.Value = (decimal)0.000;
             numOper2.Value = (decimal)0.000;
             lblOper.Text = "...";
             lblResultado.Text = "NaN";
-            lblResultado.Visible=false;
-            btnSegue.Enabled=false;
+            lblResultado.Visible = false;
+            btnSegue.Enabled = false;
             if ((double)numOper2.Value == 0.000 && lblOper.Text == btDiv.Text)
             {
                 btIgual.Enabled = false;

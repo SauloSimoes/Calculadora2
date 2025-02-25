@@ -40,7 +40,7 @@
             this.lblResultado = new System.Windows.Forms.Label();
             this.btSoma = new System.Windows.Forms.Button();
             this.btnSegue = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLimpa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numOper1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOper2)).BeginInit();
             this.SuspendLayout();
@@ -189,22 +189,22 @@
             this.btnSegue.UseVisualStyleBackColor = true;
             this.btnSegue.Click += new System.EventHandler(this.btnSegue_Click);
             // 
-            // button1
+            // btnLimpa
             // 
-            this.button1.Location = new System.Drawing.Point(525, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 36);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Limpa";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLimpa.Location = new System.Drawing.Point(525, 216);
+            this.btnLimpa.Name = "btnLimpa";
+            this.btnLimpa.Size = new System.Drawing.Size(78, 36);
+            this.btnLimpa.TabIndex = 13;
+            this.btnLimpa.Text = "Limpa";
+            this.btnLimpa.UseVisualStyleBackColor = true;
+            this.btnLimpa.Click += new System.EventHandler(this.btnLimpa_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpa);
             this.Controls.Add(this.btnSegue);
             this.Controls.Add(this.btSoma);
             this.Controls.Add(this.lblResultado);
@@ -240,7 +240,7 @@
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btSoma;
         private System.Windows.Forms.Button btnSegue;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimpa;
     }
 }
 
